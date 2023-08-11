@@ -10,6 +10,8 @@ import Button from './components/Button/Button';
 function App() {
 
   const [tasks, setTasks] = useState([])
+  const [inputValue, setInputValue] = useState("")
+  const onInput = (e) => setInputValue(e.target.value);
 
   useEffect(()=>{
     // setTasks(getTasks())
@@ -34,13 +36,14 @@ function App() {
 
   
     
-
+  
   const clickHandler = (event) => {
       let buttonId = event.target.id
+      // let inputValue;
       
       switch(buttonId) {
         case "addButton":
-            let inputValue = document.getElementById("input").value
+            setInputValue(document.getElementById("input").value)
             console.log(inputValue)
             let newTask = {
                 "id": "",
@@ -69,10 +72,16 @@ function App() {
           // window.location.reload(false)
           break;
         case "searchButton":
-          let searchValue = document.getElementById("input").value.toLowerCase()
-          console.log(searchValue)
-          let searchedTasks = tasks.filter(task => task.text.toLowerCase().includes(searchValue))
+          setInputValue(document.getElementById("input").value.toLowerCase())
+          console.log(inputValue)
+          let searchedTasks = tasks.filter(task => task.text.toLowerCase().includes(inputValue))
           setTasks(searchedTasks)
+          break;
+        case "clearButton":
+          console.log("clear")
+          console.log(document.getElementById("input").value.toLowerCase())
+          setInputValue("")
+          console.log(inputValue)
           break;
         default:
           // code block
@@ -98,8 +107,8 @@ function App() {
         })}
       </div>
       <div className='inputSection'>
-        <input id="input" type="text" placeholder='Nouvelle tâche'/>
-        <Button id="addButton" text="Ajouter"  onClick={clickHandler}/>
+        <input id="input" type="text" value={inputValue} placeholder='Nouvelle tâche' onInput={onInput}/>
+        <Button id="clearButton" text="Effacer"  onClick={clickHandler}/>
       </div>
       
       
