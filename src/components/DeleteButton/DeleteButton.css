@@ -1,0 +1,9 @@
+.deleteButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(179, 219, 219);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
