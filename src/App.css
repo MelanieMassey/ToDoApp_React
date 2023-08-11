@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+h1 {
+    text-align: center;
+}
+
 .buttonsSection {
     display: flex;
     flex-direction: row;
@@ -20,4 +24,15 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     margin-top: 1rem;
+}
+
+#input {
+    margin-right: 20px;
+    border: 1px lightgray solid;
+    border-radius: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-family: inherit;
+    font-size: inherit;
+
 }

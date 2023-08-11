@@ -1,0 +1,31 @@
+.button{
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.button:hover{
+    opacity: 0.5;
+}
+
+#allButton {
+    background-color: rgb(191, 142, 238);
+}
+
+#todoButton {
+    background-color: rgb(247, 247, 171);
+}
+
+#doneButton {
+    background-color: rgb(150, 253, 219);
+}
+
+#addButton{
+    background-color: rgb(245, 162, 162);
+}
+
+#searchButton{
+    background-color: rgb(245, 210, 146);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Button.css";
 // import { addTask } from "../../api/apiCalls";
 // import { deleteTask } from "../../api/apiCalls";
 
@@ -31,6 +32,6 @@ export default function Button(props){
     // }
 
     return(
-        <button id={props.id} type="button" onClick={props.onClick}>{props.text}</button>
+        <button id={props.id} className="button" type="button" onClick={props.onClick}>{props.text}</button>
     )
 }
