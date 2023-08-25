@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const apiURL = "http://localhost:8081/tasks"
+const apiURL = "http://34.155.87.181:8082/tasks"
 
 
 // export async function getTasks(){
